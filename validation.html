@@ -1,0 +1,50 @@
+<html>
+<body align="center">
+
+<h2>Registration Form</h2>
+
+<form id="myForm">
+  Name: <input type="text" id="name" name="name"><br><br>
+  Phone: <input type="text" id="phone" name="phone"><br><br>
+  Email: <input type="text" id="email" name="email"><br><br>
+  Password: <input type="password" id="password" name="password"><br><br>
+  <input type="submit" value="submit">
+</form>
+
+<script>
+document.getElementById("myForm").addEventListener("submit", function(event)
+{
+  event.preventDefault();
+  
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+
+  if(name == "" || phone == "" || email == "" || password == ""){
+    alert("All fields must be filled out");
+    return false;
+  }
+  if(phone.length < 10)
+  {
+    alert("Not a valid Phone Number");
+    return false;
+  }
+  if(email.split('@').length != 2)
+  {
+    alert("Not a valid Email");
+    return false;
+  }
+
+  if(password.length < 8)
+  {
+    alert("Password must be at least 8 characters long.");
+    return false;
+  }
+
+  alert("Form Submitted Successfully!");
+});
+</script>
+
+</body>
+</html>
