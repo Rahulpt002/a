@@ -14,7 +14,9 @@
 
         if (!click(radios1) || !click(radios2) || !click(radios3)) {
             alert('Please answer all questions before submitting.');
-            return false;
+        }
+        else {
+		alert('Submission successful!');
         }
     };
     function click(radios) {
