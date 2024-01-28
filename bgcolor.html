@@ -1,0 +1,16 @@
+<html>
+<body>
+<center>
+<button onclick="changecolor()">Change</button>
+</center>
+<script>
+function changecolor()
+{
+var random=Math.ceil(Math.random()*1000000)
+color="#"
+color+=random.toString()
+document.body.style.backgroundColor=color;
+}
+</script>
+</body>
+</html>
