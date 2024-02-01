@@ -101,7 +101,7 @@ for (int i = 0; current != NULL && i < position - 1; i++) {
 current = current->next;
  }
 if (current == NULL) {
-printf("Position out of range\n");
+printf("no position found\n");
 free(newNode);
 return;
 }
